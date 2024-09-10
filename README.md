@@ -1,81 +1,68 @@
+
 # OWL 2 Javascript Project Starter
 
-This repo is an example on how to start a real project with the Odoo OWL framework in version 2.
+This project is built using Vite, Tailwind CSS, and the OWL.js framework.
 
+## Getting Started
 
-[![Deploy on Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Coding-Dodo/OWL2-JavaScript-Project-Starter)
+### Prerequisites
 
-## Features
+Make sure you have [Node.js](https://nodejs.org/) and [pnpm](https://pnpm.io/) installed on your system.
 
-- [OWL](https://github.com/odoo/owl) v2.0.5
-- Javascript
-- Vite
-- TailwindCSS
+### Installation
 
-## Installation
+1. Clone this repository:
+   ```
+   git clone [repository-url]
+   cd owl-js-project-starter 
+   ```
 
-[This repo is a "template repository". It means you can quickly create repositories based on this one, without it being a fork.](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template#about-repository-templates)
+2. Install dependencies using pnpm:
+   ```
+   pnpm install
+   ```
 
-Otherwise, you may clone it:
+### Development
 
-```bash
-git clone https://github.com/Coding-Dodo/OWL2-JavaScript-Project-Starter.git
+To start the development server:
+
 ```
-
-Install dependencies:
-
-```bash
-pnpm i
-```
-
-Dev with HMR:
-
-```bash
 pnpm dev
 ```
 
-Production build
+This will start the Vite server, and you can access your application at `http://localhost:5173`.
 
-```bash
+### Building for Production
+
+To build your application for production:
+
+```
 pnpm build
 ```
 
 Preview Production build
 
-```bash
+```
 pnpm preview
 ```
-
 Run tests
 
-```bash
+```
 pnpm test
 ```
 
-## Components
 
-It is expected to create components in one file, following this convention:
+This will create an optimized build in the `dist/` directory.
 
-```js
-import { Component, useState, tags } from "@odoo/owl";
+### Learn More
 
-const APP_TEMPLATE = tags.xml/*xml*/ `
-<div t-name="App" class="" t-on-click="update">
-  Hello <t t-esc="state.text"/>
-</div>
-`;
+To learn more about the technologies used in this project, check out their official documentation:
 
-export class App extends Component {
-  static template = APP_TEMPLATE;
-  state = useState({ text: "Owl" });
-  update() {
-    this.state.text = this.state.text === "Owl" ? "World" : "Owl";
-  }
-}
-```
+- [OWL Documentation](https://github.com/odoo/owl/blob/master/doc/readme.md)
+- [Vite Documentation](https://vitejs.dev/guide/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-## See also
+Happy coding!
 
-If your are searching for OWL version 1 project starter with Tailwind and PostCSS:
 
-[https://github.com/Coding-Dodo/OWL-JavaScript-Tailwind-Project-Starter](https://github.com/Coding-Dodo/OWL-JavaScript-Tailwind-Project-Starter)
+
